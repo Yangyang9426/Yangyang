@@ -2,7 +2,6 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ArrowDownRight, ArrowUpRight, Mail, MoveDownRight, Phone, Play, Plus, Sparkles } from 'lucide-react'
 import './styles.css'
-import './portrait.css'
 
 const projects = [
   { title: '知识 IP 直播操盘', label: '直播增长 / 2025', image: '/media/project-01.jpg', className: 'project-wide', stat: '2,000+', note: '单场自然流在线' },
@@ -20,8 +19,9 @@ const skills = [
 function App() {
   return <main>
     <section className="hero" id="home">
+      <img className="hero-poster" src="/media/portrait.jpg" alt="" aria-hidden="true" />
       <video className="hero-video" autoPlay muted loop playsInline poster="/media/portrait.jpg">
-        <source src="/media/hero-video.qt" />
+        <source src="/media/hero-video.qt" type="video/quicktime" />
       </video>
       <div className="hero-shade" />
       <div className="shell hero-inner">
